@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>MyTOWN | City of Toronto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam%7CPoppins">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="main-body">
+
+            <div class="header">
+                <h1 id="header"><span id="my">My</span><span id="to">TO</span>WN</h1>
+            </div>
+
+            <div id="left">
+                <button class="search-bar" disabled>
+                    <input id="search-text" type="text">
+                    <input id="button-search" type="submit" value="Search">
+                </button>
+
+                <table class="button-category">
+                    <tr>
+                        <td>
+                            <button id="library">
+                                <i class="fas fa-book-open"></i>
+                                Library
+                            </button>
+                        </td>
+                        <td>
+                            <button id="community-center">
+                                <i class="fas fa-tree"></i>
+                                Community Center
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="pool-arena">
+                                <i class="fas fa-hockey-puck"></i>
+                                Arena
+                            </button>
+                        </td>
+                        <td>
+                            <button id="park">
+                                <i class="fas fa-swimmer"></i>
+                                Pool
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="list-container">
+                <table id="menu-category">
+                    <tr>
+                        <td id="menu-icon-container">
+                            <div class="menu-icon">
+                            <div id="menu-icon1"></div>
+                            <div id="menu-icon2"></div>
+                            <div id="menu-icon3"></div>
+                        </div>
+                        </td>
+                        <td id="menu-content-container">
+                            <span id="menu-content">(Category Name)</span>
+                            
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="list-tile">
+                    <div class="tile-content">
+                        Location name<br>
+                        Description<br>
+                        <span id="openclose">Open now</span><br>
+                    </div>
+                </div>
+                <div class="list-tile">
+                    <div class="tile-content">
+                        Location name<br>
+                        Description<br>
+                        <span id="openclose">Open now</span><br>
+                    </div>
+                </div>
+                <div class="list-tile">
+                    <div class="tile-content">
+                        Location name<br>
+                        Description<br>
+                        <span id="openclose">Open now</span><br>
+                    </div>
+                </div>
+                <div class="list-tile">
+                    <div class="tile-content">
+                        Location name<br>
+                        Description<br>
+                        <span id="openclose">Open now</span><br>
+                    </div>
+                </div>
+                <div class="list-tile">
+                    <div class="tile-content">
+                        Location name<br>
+                        Description<br>
+                        <span id="openclose">Open now</span><br>
+                    </div>
+                </div>
+            </div>
+            <div id="googleMap"></div>
+        </div>
+    </body>
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(43.659536, -79.388729),
+                zoom: 5
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQy2G2Vc52cVOtS4mFJyI8suhAKxsWzE&callback=myMap" async defer></script>
+
+</html>
