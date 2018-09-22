@@ -1,0 +1,166 @@
+body{
+    width: 99%;
+    height: 93%;
+}
+
+.header{
+    position: relative;
+    background-color: #fffee8;
+    float: top;
+    height: 100px;
+    padding-left: 30px;
+}
+
+#header {
+    color: dimgray;
+    font-family: 'Poppins', sans-serif;
+    font-size:400%;
+}
+
+#my {
+    font-family: 'Kalam', cursive;
+    font-size: 70%;
+}
+
+#to {
+    color: darkblue;
+    font-weight: bold;
+}
+
+#left{
+    height: 90%;
+    width: 500px;
+    background-color: white;
+    float: left;
+    display: none;
+}
+
+.list-container{
+    height: 90%;
+    width: 500px;
+    background-color: white;
+    float: left;
+
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr repeat(auto-fill, minmax(auto, 250px));
+    grid-gap: 10px;
+    max-width: 450px;
+    overflow: scroll;
+}
+
+#menu-category{
+    border-top: solid thin grey;
+    border-bottom: solid thin grey;
+    height: 40px;
+}
+
+#menu-icon-container{
+    width:30px;
+}
+
+.menu-icon {
+    border: solid thin grey;
+    width: 24px;
+    border-radius: 5px 5px;
+    background-color: white;
+    height: 25px;
+}
+
+#menu-icon1, #menu-icon2, #menu-icon3 {
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 4px;
+    transition: 0.4s;
+}
+
+#menu-content{
+    font-size: 20px;
+}
+
+.list-tile {
+    display: table;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url("{{url_for('static', filename='img.jpg') }") no-repeat;
+    background-size: 425px 250px;
+    width: 425px;
+    height: 250px;
+    opacity: .7;
+}
+
+.tile-content {
+    padding: 5px;
+    display: table-cell;
+    vertical-align: bottom;
+    color: white;
+    font-size: 120%;
+    font-weight: 200;
+}
+
+#openclose {
+    color: green;
+}
+
+#googleMap{
+    margin-top: 10px;
+    height: 90%;
+    margin-left: 500px;
+    margin-right:0px;
+    background-color: pink;
+}
+
+.search-bar{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 55px;
+    margin-top: 120px;
+}
+
+#search-text{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#button-search{
+    background-color: orange;
+    margin-left: 5px;
+    width: 60px;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#library, #park, #pool-arena, #community-center{
+    display: inline-block;
+    margin: 0px 0px;
+    font-size: 20px;
+    color: white;
+    font-family: courier;
+    font-weight: bold;
+    height: 100px;
+    width: 170px;
+    border-radius: 15px;
+    background-color: #2f69c6;
+}
+
+.button-category{
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#community-center, #park{
+    margin-left: 50px;
+}
+
+#pool-arena, #park{
+    margin-top: 50px;
+}
+
