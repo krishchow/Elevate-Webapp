@@ -9,11 +9,20 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     keyData = list(open('cfg.txt','r'))
-    dat = [{'name': 'library', 'lat':53.7267,'long':-127.6476,'desc':'this is a library'}, \
-    {'name': 'library', 'lat':12,'long':13,'desc':'this is a library'}, \
-    {'name': 'library', 'lat':12,'long':13,'desc':'this is a library'}]
+    conn = sqlite3.connect(r'data.db')
+    conn.row_factory = dict_factory
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM locations WHERE category="Library";')
+    dat= cur.fetchall()
     #print(keyData[0])
     return render_template('index.html', data=dat,URLKEY=keyData[0])
+
+def dict_factory(cursor, row):
+    d = {}
+    for idx, col in enumerate(cursor.description):
+        d[col[0]] = row[idx]
+    return d
+
 
 def isAdmin(row):
     if int(list(row)[2]) == 2:
