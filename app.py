@@ -9,13 +9,14 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     keyData = list(open('cfg.txt','r'))
+    keyData = keyData[0]
+    keyData = 'https://maps.googleapis.com/maps/api/js?key={0}&callback=myMap'.format(keyData)
     conn = sqlite3.connect(r'data.db')
     conn.row_factory = dict_factory
     cur = conn.cursor()
     cur.execute('SELECT * FROM locations WHERE category="Library";')
     dat= cur.fetchall()
-    #print(keyData[0])
-    return render_template('index.html', data=dat,URLKEY=keyData[0])
+    return render_template('index.html', data=dat,URLKEY=keyData)
 
 def dict_factory(cursor, row):
     d = {}
